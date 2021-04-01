@@ -1,12 +1,28 @@
-library(vistime)
+#!/usr/bin/env Rscript
+library(dplyr, quietly = T)
+require(timelineR)
 
-timeline_data = data.frame(event = c("Event 1", "Event 2"),
-														start = c("2020-06-06", "2020-10-01"),
-														end = c("2020-10-01", "2020-12-31"),
-														# color = c("red", "blue"),
-														# fontcolor = c("blue", "red"),
-														group = "Speed (Mbps)")
+timeline_data = read.csv("SpeedTest Down-Up Data.csv",
+												 skip = 1, # Skip the header
+												 header = FALSE,
+												 col.names = c("col_datetime","col_down","col_up"))
 
-timeline_data = read.csv("SpeedTest Down-Up Data.csv")
+timeline_data$col_datetime = as.POSIXct(timeline_data$col_datetime)
 
-vistime(timeline_data)
+start_time = as.POSIXct("2021-01-01 00:00:00")
+
+titles = c("col_down" = "Download Speed",
+					 "col_up" = "Upload Speed")
+
+ylabels = c("col_down" = "Speed (Mbps)",
+						"col_up" = "Speed (Mbps)")
+
+save_path = "F:/Projects/SpeedTest Data/Rplot.png"
+
+plot_grob = plot_timeline(timeline_data,
+													start_time = start_time,
+													titles = titles,
+													ylabels = ylabels,
+													save_path = save_path,
+													output_width = 900,
+													output_height = 600)
