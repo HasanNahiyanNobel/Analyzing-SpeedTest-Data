@@ -24,5 +24,5 @@ plot_grob = plot_timeline(timeline_data,
 													titles = titles,
 													ylabels = ylabels,
 													save_path = save_path,
-													output_width = 900,
+													output_width = 1350,
 													output_height = 600)
