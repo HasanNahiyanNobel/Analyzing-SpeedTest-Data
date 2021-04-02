@@ -1,9 +1,8 @@
 import json
 
-
 file_input = open("SpeedTest Outputs.txt", "r")
 
-open("SpeedTest Down-Up Data.csv", "w").close()  # Clearing existing data
+open("SpeedTest Down-Up Data.csv", "w").close()  # Clear existing data
 file_output = open("SpeedTest Down-Up Data.csv", "a")
 file_output.write("Date-Time, Download Speed (Mbyte/s), Upload Speed (Mbyte/s)\n")
 
