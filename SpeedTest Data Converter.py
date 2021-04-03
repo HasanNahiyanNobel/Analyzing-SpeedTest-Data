@@ -4,7 +4,7 @@ file_input = open("SpeedTest Outputs.txt", "r")
 
 open("SpeedTest Down-Up Data.csv", "w").close()  # Clear existing data
 file_output = open("SpeedTest Down-Up Data.csv", "a")
-file_output.write("Date-Time, Download Speed (Mbyte/s), Upload Speed (Mbyte/s)\n")
+file_output.write("Date-Time, Download Speed (MB/s), Upload Speed (MB/s)\n")
 
 for a_line in file_input:
 	json_data = json.loads(a_line)
