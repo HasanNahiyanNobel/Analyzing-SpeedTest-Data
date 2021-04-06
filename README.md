@@ -1,8 +1,15 @@
 # Analyzing SpeedTest Data
-This is a combination of three different scripts which uses data from [SpeedTest CLI](https://www.speedtest.net/apps/cli) to analyze internet connection speed.
+This is a **Shell script** which performs a speed test using [SpeedTest CLI](https://www.speedtest.net/apps/cli), then invokes a Python script and an R script respectively to store and analyze the data.
 
-Workflow of the scripts is as follows:
-1. A **Shell Script** is executed from command line with 3 arguments.
-1. If the 1st argument is 1, then a **SpeedTest** is performed, and data is appended in a single line of a `.txt` file, as JSON object.
-1. If the 2nd argument is 1, then selected data (*timestamp*, *download*, *upload*) from the `.txt` file is exported to a `.csv` file, using a **Python Script**.
-1. If the 3rd argument is 1, data from `.csv` file is plotted on two timeline graphs and exported as `.png` file using an **R Script**.
+## Arguments
+* `$1`: if `1`, `true`, `True` or `TRUE`, a speed test is performed, and data is appended in a single line of a `.txt` file as JSON object.
+* `$2`: if `1`, `true`, `True` or `TRUE`, then selected data (*timestamp*, *download*, *upload*) from the `.txt` file is exported to a `.csv` file, using the Python script.
+* `$3`: if `1`, `true`, `True` or `TRUE`, data from the `.csv` file is plotted on two timeline graphs and exported as a `.png` file using the R script.
+* `$4`: used for the `start_time` of the timeline graph, with a default value `2000-01-01 00:00:00`. Possible cases are,
+	- If not given, then the default value
+	- If `TRUE`, then also the default value
+	- If given in a format which `POSIXct` can parse, then the given value.
+* `$5`: used for the `numeric_plot_type` of the plot, with a default value `"line"`. Possible cases are,
+	- If not given, then the default value
+	- If `TRUE`, then also the default value
+	- If `"line"`, `"plot"` or `"step"`, then the given value.
