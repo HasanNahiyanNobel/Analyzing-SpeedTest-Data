@@ -1,6 +1,8 @@
+venv/
+.idea
 .Rproj.user/
 .RData
 .Rhistory
 .Ruserdata
 Plotting Data with R.Rproj
-venv/
+Test Script.sh
