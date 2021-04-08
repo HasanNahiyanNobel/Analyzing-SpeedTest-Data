@@ -1,5 +1,5 @@
 # Analyzing SpeedTest Data
-This is a **Shell script** which performs a speed test using [SpeedTest CLI](https://www.speedtest.net/apps/cli), then invokes a Python script and an R script respectively to store and analyze the data.
+This is a **Shell script** which performs a speed test using [SpeedTest CLI](https://github.com/sivel/speedtest-cli), then invokes a Python script and an R script respectively to store and analyze the data.
 
 ## Arguments
 * `$1`: if `1`, `true`, `True` or `TRUE`, a speed test is performed, and data is appended in a single line of a `.txt` file as JSON object.
