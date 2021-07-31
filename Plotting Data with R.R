@@ -21,7 +21,7 @@ require(timelineR)
 
 args = commandArgs(trailingOnly=TRUE)
 number_of_args = length(args)
-default_start_time = as.POSIXct("2000-01-01 00:00:00")
+default_start_time = as.POSIXct("2021-07-01 00:00:00") # TODO: Fix this in README.md.
 default_numeric_plot_type = "line"
 
 timeline_data = read.csv("SpeedTest Down-Up Data.csv",
