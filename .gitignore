@@ -1,11 +1,9 @@
 venv/
-.idea
-.Rproj.user/
+.idea/
 .RData
 .Rhistory
-.Ruserdata
-Plotting Data with R.Rproj
+.Rproj.user/
 TestScript.py
-SpeedTest Outputs.txt
-SpeedTest Down-Up Data.csv
+SpeedTestDownUpData.csv
+SpeedTestOutputs.txt
 Rplot.png
