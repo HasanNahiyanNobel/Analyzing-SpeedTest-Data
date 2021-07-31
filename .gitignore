@@ -5,7 +5,7 @@ venv/
 .Rhistory
 .Ruserdata
 Plotting Data with R.Rproj
-Test Script.sh
+TestScript.py
 SpeedTest Outputs.txt
 SpeedTest Down-Up Data.csv
 Rplot.png
