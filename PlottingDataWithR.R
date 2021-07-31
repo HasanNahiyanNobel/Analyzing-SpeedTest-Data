@@ -24,10 +24,10 @@ number_of_args <- length(args)
 default_start_time <- as.POSIXct("2000-01-01 00:00:00")
 default_numeric_plot_type <- "line"
 
-timeline_data <- read.csv("SpeedTest Down-Up Data.csv",
-						 skip = 1, # Skip the header
+timeline_data <- read.csv("SpeedTestDownUpData.csv",
+						  skip = 1, # Skip the header
 						 header = FALSE,
-						 col.names = c("col_datetime", "col_down", "col_up"))
+						  col.names = c("col_datetime", "col_down", "col_up"))
 
 timeline_data$col_datetime <- as.POSIXct(timeline_data$col_datetime)
 

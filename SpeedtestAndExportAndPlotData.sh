@@ -10,12 +10,12 @@
 ##	$5: arg2 of R script
 
 if [ "$1" = "1" ] || [ "$1" = "true" ] || [ "$1" = "True" ] || [ "$1" = "TRUE" ]; then
-	speedtest --json >> "SpeedTest Outputs.txt"
+	speedtest --json >> "SpeedTestOutputs.txt"
 	echo "Test complete."
 fi
 
 if [ "$2" = "1" ] || [ "$2" = "true" ] || [ "$2" = "True" ] || [ "$2" = "TRUE" ]; then
-	python "SpeedTest Data Exporter.py"
+	python "SpeedTestDataExporter.py"
 	echo "Exported data to CSV."
 fi
 
@@ -23,11 +23,11 @@ if [ "$3" = "1" ] || [ "$3" = "true" ] || [ "$3" = "True" ] || [ "$3" = "TRUE" ]
   echo "" # Just because this new line feels good.
 
   if [ "$#" -eq 3 ]; then
-		Rscript "Plotting Data with R.R"
+		Rscript "PlottingDataWithR.R"
 	elif [ "$#" -eq 4 ]; then
-	  Rscript "Plotting Data with R.R" $4
+	  Rscript "PlottingDataWithR.R" "$4"
 	else
-		Rscript "Plotting Data with R.R" $4 $5
+		Rscript "PlottingDataWithR.R" "$4" "$5"
 	fi
 
 	echo "Plotted Data in file."

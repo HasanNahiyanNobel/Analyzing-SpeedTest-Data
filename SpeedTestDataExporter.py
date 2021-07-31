@@ -1,10 +1,10 @@
 import json
 from datetime import datetime, timedelta
 
-file_input = open("SpeedTest Outputs.txt", "r")
+file_input = open("SpeedTestOutputs.txt", "r")
 
-open("SpeedTest Down-Up Data.csv", "w").close()  # Clear existing data.
-file_output = open("SpeedTest Down-Up Data.csv", "a")
+open("SpeedTestDownUpData.csv", "w").close()  # Clear existing data.
+file_output = open("SpeedTestDownUpData.csv", "a")
 file_output.write("Timestamp, Download Speed (MB/s), Upload Speed (MB/s)\n")
 
 for a_line in file_input:
