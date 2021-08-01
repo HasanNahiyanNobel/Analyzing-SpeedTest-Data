@@ -10,7 +10,7 @@
 ##	$5: arg2 of R script
 
 if [ "$1" = "1" ] || [ "$1" = "true" ] || [ "$1" = "True" ] || [ "$1" = "TRUE" ]; then
-	speedtest --json >> "SpeedTestOutputs.txt"
+	speedtest --json >> "EncryptedSpeedTestOutputs.txt"
 	echo "Test complete."
 fi
 
