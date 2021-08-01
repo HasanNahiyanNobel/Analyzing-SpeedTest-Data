@@ -24,7 +24,7 @@ number_of_args <- length(args)
 default_start_time <- as.POSIXct("2000-01-01 00:00:00")
 default_numeric_plot_type <- "line"
 
-timeline_data <- read.csv("SpeedTestDownUpData.csv",
+timeline_data <- read.csv("EncryptedSpeedTestDownUpData.csv",
 						  skip = 1, # Skip the header
 						 header = FALSE,
 						  col.names = c("col_datetime", "col_down", "col_up"))
@@ -60,7 +60,7 @@ titles <- c("col_down" = "Download Speed",
 ylabels <- c("col_down" = "Speed (MB/s)",
 			"col_up" = "Speed (MB/s)")
 
-save_path <- "Rplot.png"
+save_path <- "EncryptedRPlot.png"
 
 plot_grob <- plot_timeline(timeline_data,
 						  start_time = start_time,
