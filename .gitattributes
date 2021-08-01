@@ -1,0 +1,4 @@
+#pattern  filter=crypt diff=crypt merge=crypt
+SpeedTestOutputs.txt filter=crypt diff=crypt merge=crypt
+SpeedTestDownUpData.csv filter=crypt diff=crypt merge=crypt
+Rplot.png filter=crypt diff=crypt merge=crypt
