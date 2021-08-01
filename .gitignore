@@ -4,6 +4,3 @@ venv/
 .Rhistory
 .Rproj.user/
 TestScript.py
-SpeedTestDownUpData.csv
-SpeedTestOutputs.txt
-Rplot.png
